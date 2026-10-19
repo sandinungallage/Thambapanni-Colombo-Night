@@ -1,0 +1,1117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Thambapanni Colombo Night</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Thambapanni Colombo Night by Star Gate Events. Live music, Heritage Moves dance and culture, and street food at Arcade Independence Square, Colombo. Phase 2 returns in 2027.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Italiana&family=Jost:wght@300;400;500&display=swap">
+<style>
+/* Layout concept: a letterpress programme in black and gold. Double hairlines echo the logo's
+   flourish rules; the only loud moments are the logo hero and the 3D ground plan. */
+:root {
+  --black: #0a0908;
+  --coal: #100e0c;
+  --panel: #161310;
+  --line: #3a3123;
+  --gold: #c9a96a;
+  --gold-hi: #ead7a6;
+  --gold-lo: #8d7545;
+  --text: #ece5d6;
+  --muted: #a89f8c;
+  --f-display: 'Italiana', 'Cormorant Garamond', Georgia, serif;
+  --f-body: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --f-ui: 'Jost', 'Helvetica Neue', Arial, sans-serif;
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--black);
+  color: var(--text);
+  font-family: var(--f-body);
+  font-size: 1.2rem;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px);
+  z-index: 10; background: var(--black);
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: var(--gold-hi); text-decoration-color: var(--gold-lo); text-underline-offset: 3px; }
+a:hover { color: #fff; }
+:focus-visible { outline: 2px solid var(--gold-hi); outline-offset: 3px; }
+h1, h2, h3 { font-family: var(--f-display); font-weight: 400; margin: 0; letter-spacing: .06em; text-wrap: balance; }
+p { margin: 0; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.wrap {
+  width: 100%; max-width: 1240px; margin-inline: auto;
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+}
+.eyebrow, .label {
+  font-family: var(--f-ui); font-weight: 400; font-size: .74rem; letter-spacing: .32em;
+  text-transform: uppercase; color: var(--gold);
+}
+.muted { color: var(--muted); }
+.lede { font-size: 1.4rem; max-width: 46ch; color: var(--text); }
+.prose { max-width: 62ch; display: grid; gap: 1.1em; }
+
+/* ornament rule */
+.orn { display: flex; align-items: center; gap: 14px; color: var(--gold-lo); }
+.orn::before, .orn::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--gold-lo)); }
+.orn::after { transform: scaleX(-1); }
+.orn i { width: 9px; height: 9px; border: 1px solid var(--gold); transform: rotate(45deg); display: block; }
+.dbl { border-top: 1px solid var(--gold-lo); border-bottom: 1px solid var(--gold-lo); padding-block: 3px; }
+.dbl > div { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+
+/* header */
+.top {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+  background: rgba(10, 9, 8, .94); backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; }
+.brand { text-decoration: none; display: grid; line-height: 1; color: var(--gold-hi); }
+.brand b { font-family: var(--f-display); font-weight: 400; font-size: 1.45rem; letter-spacing: .12em; }
+.brand span { font-family: var(--f-ui); font-size: .56rem; letter-spacing: .5em; color: var(--gold); margin-top: 5px; text-transform: uppercase; }
+.nav { display: flex; gap: 4px; flex-wrap: wrap; align-items: center; }
+.nav a, .nav button.bag {
+  font-family: var(--f-ui); font-size: .72rem; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--muted); text-decoration: none; padding: 10px 11px; background: none; border: 0; cursor: pointer;
+  border-bottom: 1px solid transparent;
+}
+.nav a:hover, .nav button.bag:hover { color: var(--gold-hi); }
+.nav a[aria-current="page"] { color: var(--gold-hi); border-bottom-color: var(--gold); }
+.nav button.bag { border: 1px solid var(--line); margin-left: 6px; color: var(--gold); }
+.menu-btn { display: none; background: none; border: 1px solid var(--line); color: var(--gold-hi); width: 44px; height: 44px; cursor: pointer; }
+.menu-btn svg { display: block; margin: auto; }
+@media (max-width: 1020px) {
+  .menu-btn { display: block; }
+  .nav { display: none; position: absolute; left: 0; right: 0; top: 100%; background: var(--black); border-bottom: 1px solid var(--line);
+    flex-direction: column; align-items: stretch; padding: 8px max(20px, env(safe-area-inset-left, 0px)) 18px max(20px, env(safe-area-inset-left, 0px)); gap: 0; }
+  .nav.open { display: flex; }
+  .nav a { padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .nav button.bag { margin: 12px 0 0; padding: 14px; }
+}
+
+/* buttons */
+.btn {
+  display: inline-block; font-family: var(--f-ui); font-size: .76rem; letter-spacing: .24em; text-transform: uppercase;
+  padding: 1em 1.7em; border: 1px solid var(--gold); color: var(--gold-hi); background: transparent;
+  text-decoration: none; cursor: pointer; text-align: center; transition: background .2s, color .2s;
+}
+.btn:hover { background: var(--gold); color: #0a0908; }
+.btn.solid { background: var(--gold); color: #0a0908; }
+.btn.solid:hover { background: var(--gold-hi); }
+.btn.small { padding: .7em 1.1em; font-size: .68rem; }
+.btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* pages */
+.page { animation: rise .45s ease both; }
+@keyframes rise { from { opacity: .0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.page-head { padding-block: 56px 36px; display: grid; gap: 18px; }
+.page-head h1 { font-size: clamp(2.4rem, 7vw, 4.6rem); line-height: 1.02; text-transform: uppercase; color: var(--gold-hi); }
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  .page-head h1, .gold-text { background: linear-gradient(180deg, #f3e3b8, #c9a96a 60%, #a98c52); -webkit-background-clip: text; background-clip: text; color: transparent; }
+}
+.section { padding-block: 44px; }
+.section > .wrap > h2, .h2 { font-size: clamp(1.7rem, 4vw, 2.6rem); text-transform: uppercase; color: var(--gold-hi); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 26px; }
+
+/* hero */
+.hero { padding-block: 40px 28px; display: grid; justify-items: center; text-align: center; gap: 18px; }
+.hero-logo { width: min(820px, 100%); aspect-ratio: 1.6 / 1; overflow: hidden; margin-block: -6px; }
+.hero-logo img { width: 100%; height: 100%; object-fit: cover; mix-blend-mode: lighten;
+  -webkit-mask-image: radial-gradient(ellipse 62% 62% at 50% 50%, #000 62%, transparent 100%);
+  mask-image: radial-gradient(ellipse 62% 62% at 50% 50%, #000 62%, transparent 100%); }
+.hero .lede { margin-inline: auto; }
+.hero .btn-row { justify-content: center; margin-top: 6px; }
+
+/* facts */
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+.fact { padding: 22px 22px 24px; border-left: 1px solid var(--line); display: grid; gap: 8px; align-content: start; min-width: 0; }
+.fact:first-child { border-left: 0; }
+.fact b { font-family: var(--f-display); font-weight: 400; font-size: 1.55rem; letter-spacing: .04em; color: var(--gold-hi); line-height: 1.15; }
+.fact span:last-child { color: var(--muted); font-size: 1.05rem; }
+@media (max-width: 700px) { .fact { border-left: 0; border-top: 1px solid var(--line); } .fact:first-child { border-top: 0; } }
+
+/* split blocks */
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 5vw, 64px); align-items: center; }
+.split > * { min-width: 0; }
+.split.rev > :first-child { order: 2; }
+@media (max-width: 820px) { .split { grid-template-columns: 1fr; } .split.rev > :first-child { order: 0; } }
+.photo { position: relative; border: 1px solid var(--line); padding: 8px; background: var(--coal); }
+.photo img { width: 100%; }
+.photo.tall img { aspect-ratio: 3 / 4; object-fit: cover; }
+.photo figcaption { font-family: var(--f-ui); font-size: .66rem; letter-spacing: .24em; text-transform: uppercase; color: var(--muted); padding: 10px 2px 2px; }
+figure { margin: 0; }
+
+/* lineup */
+.headliner { display: grid; grid-template-columns: 1.1fr 1fr; border: 1px solid var(--gold-lo); background: var(--panel); outline: 1px solid var(--line); outline-offset: 5px; margin: 6px; }
+.headliner > * { min-width: 0; }
+.headliner .ph { border: 0; border-right: 1px dashed var(--gold-lo); min-height: 260px; }
+.headliner .txt { padding: clamp(22px, 4vw, 44px); display: grid; gap: 12px; align-content: center; }
+.headliner h3 { font-size: clamp(2.4rem, 6vw, 4rem); text-transform: uppercase; color: var(--gold-hi); }
+@media (max-width: 760px) { .headliner { grid-template-columns: 1fr; } .headliner .ph { border-right: 0; border-bottom: 1px dashed var(--gold-lo); } }
+.artists { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px; margin-top: 30px; }
+.artist { display: grid; gap: 14px; }
+.artist h3 { font-size: 1.45rem; line-height: 1.2; color: var(--gold-hi); }
+.artist .ph { aspect-ratio: 3 / 4; }
+
+/* placeholder frames */
+.ph {
+  border: 1px dashed var(--gold-lo); background: repeating-linear-gradient(135deg, rgba(201,169,106,.05) 0 10px, transparent 10px 20px), var(--coal);
+  display: grid; place-items: center; align-content: center; gap: 8px; text-align: center; color: var(--gold-lo);
+  font-family: var(--f-ui); font-size: .66rem; letter-spacing: .26em; text-transform: uppercase; padding: 14px; min-width: 0;
+}
+.ph svg { width: 30px; height: 30px; }
+
+/* timeline */
+.timeline { display: grid; gap: 0; max-width: 720px; }
+.tl { display: grid; grid-template-columns: 110px 1fr; gap: 22px; padding-block: 18px; border-top: 1px solid var(--line); }
+.tl:last-child { border-bottom: 1px solid var(--line); }
+.tl time { font-family: var(--f-display); font-size: 1.7rem; color: var(--gold-hi); line-height: 1.1; }
+.tl h3 { font-size: 1.3rem; color: var(--text); margin-bottom: 2px; }
+.tl p { color: var(--muted); font-size: 1.08rem; }
+@media (max-width: 520px) { .tl { grid-template-columns: 1fr; gap: 4px; } }
+
+/* price list */
+.prices { max-width: 720px; border-top: 1px solid var(--gold-lo); }
+.price { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.price span:first-child { font-family: var(--f-ui); letter-spacing: .18em; text-transform: uppercase; font-size: .78rem; color: var(--text); }
+.price b { font-family: var(--f-display); font-weight: 400; font-size: 1.5rem; color: var(--gold-hi); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* ground plan */
+.plan-stage { position: relative; height: clamp(400px, 62vw, 680px); border: 1px solid var(--gold-lo); outline: 1px solid var(--line); outline-offset: 5px;
+  background: radial-gradient(ellipse at 50% 38%, #1f1910 0%, #0e0c0a 62%, #0a0908 100%); overflow: hidden; touch-action: pan-y; cursor: grab; margin: 6px; }
+.plan-stage.drag { cursor: grabbing; }
+.plan-stage canvas { display: block; width: 100%; height: 100%; }
+.pins { position: absolute; inset: 0; pointer-events: none; }
+.pin { position: absolute; left: 0; top: 0; width: 30px; height: 30px; margin: -15px 0 0 -15px; border-radius: 50%; pointer-events: auto;
+  background: rgba(10,9,8,.86); border: 1px solid var(--gold); color: var(--gold-hi); font-family: var(--f-ui); font-size: .72rem; letter-spacing: .04em; cursor: pointer; padding: 0;
+  transition: background .2s, color .2s, box-shadow .2s; }
+.pin:hover, .pin.on { background: var(--gold); color: #0a0908; box-shadow: 0 0 0 5px rgba(201,169,106,.22); }
+.plan-tools { position: absolute; right: 12px; bottom: 12px; display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; max-width: calc(100% - 24px); }
+.plan-tools button { font-family: var(--f-ui); font-size: .64rem; letter-spacing: .18em; text-transform: uppercase; background: rgba(10,9,8,.86); color: var(--gold-hi);
+  border: 1px solid var(--line); padding: 10px 12px; min-height: 40px; cursor: pointer; }
+.plan-tools button:hover, .plan-tools button[aria-pressed="true"] { border-color: var(--gold); background: var(--gold); color: #0a0908; }
+.plan-hint { position: absolute; left: 14px; top: 12px; font-family: var(--f-ui); font-size: .64rem; letter-spacing: .22em; text-transform: uppercase; color: var(--gold-lo); pointer-events: none; max-width: 60%; }
+.plan-info { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 28px; margin-top: 28px; align-items: start; }
+@media (max-width: 860px) { .plan-info { grid-template-columns: 1fr; } }
+.now { border: 1px solid var(--line); background: var(--panel); padding: 24px; display: grid; gap: 10px; min-height: 150px; align-content: start; }
+.now h3 { font-size: 1.9rem; color: var(--gold-hi); }
+.legend { display: grid; grid-template-columns: 1fr 1fr; gap: 0 18px; list-style: none; margin: 0; padding: 0; }
+@media (max-width: 460px) { .legend { grid-template-columns: 1fr; } }
+.legend button { display: flex; gap: 14px; align-items: baseline; width: 100%; background: none; border: 0; border-bottom: 1px solid var(--line); padding: 12px 2px;
+  color: var(--text); font-family: var(--f-body); font-size: 1.15rem; text-align: left; cursor: pointer; }
+.legend button i { font-style: normal; font-family: var(--f-ui); font-size: .72rem; letter-spacing: .1em; color: var(--gold); min-width: 1.6em; }
+.legend button:hover, .legend button.on { color: var(--gold-hi); border-bottom-color: var(--gold); }
+.plan-fallback { padding: 8px; }
+.plan-fallback img { width: 100%; }
+
+/* gallery */
+.albums { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 22px; }
+.album { background: none; border: 0; padding: 0; text-align: left; color: inherit; cursor: pointer; display: grid; gap: 12px; font: inherit; min-width: 0; }
+.album .cover { position: relative; aspect-ratio: 4 / 3; border: 1px solid var(--line); overflow: hidden; background: var(--coal); padding: 6px; }
+.album .cover img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+.album:hover .cover { border-color: var(--gold); }
+.album:hover .cover img { transform: scale(1.04); }
+.album .cover .ph { height: 100%; }
+.album h3 { font-size: 1.55rem; color: var(--gold-hi); }
+.album p { color: var(--muted); font-size: 1.05rem; }
+.thumbs { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+.thumb { aspect-ratio: 4 / 3; border: 1px solid var(--line); background: var(--coal); padding: 5px; cursor: pointer; }
+.thumb img { width: 100%; height: 100%; object-fit: cover; }
+.thumb:hover { border-color: var(--gold); }
+.thumbs .ph { aspect-ratio: 4 / 3; }
+button.thumb { color: inherit; }
+.back { margin-bottom: 22px; }
+.strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.strip a { display: block; aspect-ratio: 3 / 4; border: 1px solid var(--line); padding: 5px; background: var(--coal); }
+.strip img { width: 100%; height: 100%; object-fit: cover; }
+@media (max-width: 760px) { .strip { grid-template-columns: repeat(2, 1fr); } }
+#lb { position: fixed; inset: 0; z-index: 60; background: rgba(5,4,3,.96); display: grid; grid-template-rows: 1fr auto; padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px); }
+#lb img { max-width: 100%; max-height: 100%; margin: auto; object-fit: contain; }
+.lb-stage { min-height: 0; display: grid; padding: 56px 16px 8px; }
+.lb-bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 16px 16px; font-family: var(--f-ui); font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+.lb-btn { background: rgba(10,9,8,.8); border: 1px solid var(--line); color: var(--gold-hi); width: 46px; height: 46px; cursor: pointer; font-size: 1.3rem; line-height: 1; }
+.lb-btn:hover { border-color: var(--gold); }
+.lb-close { position: absolute; right: max(12px, env(safe-area-inset-right, 0px)); top: calc(12px + env(safe-area-inset-top, 0px)); }
+
+/* shop */
+.products { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 24px; }
+.product { display: grid; gap: 12px; align-content: start; min-width: 0; }
+.product .ph { aspect-ratio: 1 / 1; }
+.product h3 { font-size: 1.45rem; color: var(--gold-hi); }
+.product p { color: var(--muted); font-size: 1.05rem; }
+.product .buy { display: flex; justify-content: space-between; align-items: center; gap: 12px; border-top: 1px solid var(--line); padding-top: 12px; }
+.product .buy b { font-family: var(--f-display); font-weight: 400; font-size: 1.4rem; color: var(--text); white-space: nowrap; }
+.notice { border: 1px solid var(--line); background: var(--panel); padding: 18px 22px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 14px; margin-bottom: 30px; }
+.notice p { max-width: 60ch; }
+#cart-bd { position: fixed; inset: 0; background: rgba(0,0,0,.66); z-index: 50; }
+#cart { position: fixed; z-index: 55; top: 0; right: 0; bottom: 0; width: min(430px, 100%); background: var(--coal); border-left: 1px solid var(--gold-lo);
+  display: grid; grid-template-rows: auto 1fr auto; padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) 0; }
+#cart header { display: flex; justify-content: space-between; align-items: center; padding: 18px 22px; border-bottom: 1px solid var(--line); }
+#cart header h2 { font-size: 1.6rem; color: var(--gold-hi); text-transform: uppercase; }
+#cart .items { overflow: auto; padding: 8px 22px; }
+#cart footer { padding: 18px 22px 22px; border-top: 1px solid var(--line); display: grid; gap: 12px; }
+.line { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.line b { font-weight: 500; }
+.qty { display: inline-flex; align-items: center; border: 1px solid var(--line); }
+.qty button { width: 34px; height: 34px; background: none; border: 0; color: var(--gold-hi); cursor: pointer; font-size: 1.1rem; }
+.qty span { min-width: 28px; text-align: center; font-family: var(--f-ui); font-size: .85rem; }
+.total { display: flex; justify-content: space-between; font-family: var(--f-display); font-size: 1.5rem; color: var(--gold-hi); }
+
+/* phase 2 + faq + contact */
+.status { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0; border: 1px solid var(--line); background: var(--panel); }
+.status > div { padding: 24px; border-left: 1px solid var(--line); display: grid; gap: 8px; align-content: start; min-width: 0; }
+.status > div:first-child { border-left: 0; }
+.status b { font-family: var(--f-display); font-weight: 400; font-size: 1.5rem; color: var(--gold-hi); }
+.status span.tag { font-family: var(--f-ui); font-size: .62rem; letter-spacing: .24em; text-transform: uppercase; color: var(--gold-lo); }
+@media (max-width: 700px) { .status > div { border-left: 0; border-top: 1px solid var(--line); } .status > div:first-child { border-top: 0; } }
+.faq { max-width: 780px; border-top: 1px solid var(--gold-lo); }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { cursor: pointer; padding: 18px 28px 18px 0; font-family: var(--f-display); font-size: 1.4rem; color: var(--gold-hi); list-style: none; position: relative; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: 4px; top: 50%; transform: translateY(-50%); font-family: var(--f-ui); color: var(--gold); }
+.faq details[open] summary::after { content: "\2212"; }
+.faq details p { padding: 0 0 20px; color: var(--muted); max-width: 62ch; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+.card { border: 1px solid var(--line); background: var(--panel); padding: 24px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.card h3 { font-size: 1.6rem; color: var(--gold-hi); }
+.phone { font-family: var(--f-display); font-size: 1.7rem; letter-spacing: .06em; color: var(--text); user-select: all; }
+.social { display: flex; gap: 12px; flex-wrap: wrap; }
+.social a { width: 48px; height: 48px; border: 1px solid var(--gold-lo); display: grid; place-items: center; color: var(--gold-hi); transition: background .2s, color .2s; }
+.social a:hover { background: var(--gold); color: #0a0908; }
+.social svg { width: 22px; height: 22px; }
+
+/* footer */
+.foot { margin-top: 60px; border-top: 1px solid var(--gold-lo); background: var(--coal); }
+.foot .wrap { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 36px; padding-block: 44px 28px; }
+.foot .wrap > * { min-width: 0; }
+@media (max-width: 760px) { .foot .wrap { grid-template-columns: 1fr; } }
+.foot ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.foot li a { text-decoration: none; color: var(--muted); font-size: 1.1rem; }
+.foot li a:hover { color: var(--gold-hi); }
+.foot .small { color: var(--muted); font-size: 1rem; }
+.legal { border-top: 1px solid var(--line); }
+.legal .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding-block: 18px 22px; font-family: var(--f-ui); font-size: .66rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); grid-template-columns: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .page { animation: none; }
+  .album .cover img { transition: none; }
+}
+</style>
+</head>
+<body>
+
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#home" data-go="home" aria-label="Thambapanni Colombo Night, home">
+      <b>THAMBAPANNI</b><span>Colombo Night</span>
+    </a>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Menu">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 6h16M3 11h16M3 16h16"/></svg>
+    </button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#home" data-go="home">Home</a>
+      <a href="#night" data-go="night">The Night</a>
+      <a href="#plan" data-go="plan">Ground Plan</a>
+      <a href="#heritage" data-go="heritage">Heritage Moves</a>
+      <a href="#gallery" data-go="gallery">Gallery</a>
+      <a href="#shop" data-go="shop">Shop</a>
+      <a href="#phase2" data-go="phase2">Phase 2</a>
+      <a href="#contact" data-go="contact">Contact</a>
+      <button class="bag" id="bag-btn" type="button">Bag (<span id="bag-n">0</span>)</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HOME ============ -->
+<section class="page" data-page="home">
+  <div class="hero wrap">
+    <p class="eyebrow">Phase 2 &middot; 2027</p>
+    <h1 class="sr">Thambapanni Colombo Night</h1>
+    <div class="hero-logo"><img src="img/logo.jpg" alt="Thambapanni Colombo Night logo" width="1500" height="1500"></div>
+    <p class="lede">Live music, traditional dance and street food in the courtyard of Arcade Independence Square, Colombo. The night returns in 2027.</p>
+    <div class="btn-row">
+      <a class="btn solid" href="#phase2" data-go="phase2">Phase 2 updates</a>
+      <a class="btn" href="#gallery" data-go="gallery">Relive Phase 1</a>
+    </div>
+  </div>
+
+  <div class="wrap section">
+    <div class="sec-head"><p class="label">Phase 1 at a glance</p><div class="orn"><i></i></div></div>
+    <div class="dbl"><div class="facts">
+      <div class="fact"><span class="label">Date</span><b>29 August 2025</b><span>One night, one courtyard.</span></div>
+      <div class="fact"><span class="label">Venue</span><b>Arcade Independence Square</b><span>Colombo, entrance from Bauddhaloka Mawatha.</span></div>
+      <div class="fact"><span class="label">Heritage Moves</span><b>5:00 PM</b><span>Free entrance.</span></div>
+      <div class="fact"><span class="label">Main show</span><b>7:00 PM onwards</b><span>Doors open at 6:30 PM.</span></div>
+    </div></div>
+  </div>
+
+  <div class="wrap section">
+    <div class="split">
+      <div class="prose">
+        <p class="label">Why Thambapanni</p>
+        <h2 class="h2">The island's oldest name</h2>
+        <p>Thambapanni is the name Sri Lanka carried in ancient times. We borrowed it for a night that puts the island's music, dance and food in one place, in the middle of Colombo.</p>
+        <p>The first edition filled the courtyard of Arcade Independence Square. Phase 2 is planned for 2027.</p>
+        <div class="btn-row"><a class="btn" href="#night" data-go="night">About the night</a></div>
+      </div>
+      <figure class="photo"><img src="img/crowd.jpg" alt="Crowd seated at long wooden tables in the courtyard at night, string lights above" width="1600" height="1066" loading="lazy"><figcaption>The courtyard, 29 August 2025</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="wrap section">
+    <div class="sec-head"><p class="label">Phase 1 lineup</p><h2 class="h2">On the main stage</h2></div>
+    <p class="lede" id="home-lineup"></p>
+    <div class="btn-row" style="margin-top:22px"><a class="btn" href="#night" data-go="night">Full lineup</a></div>
+  </div>
+
+  <div class="wrap section">
+    <div class="split rev">
+      <figure class="photo"><img src="img/plan.jpg" alt="Illustrated ground plan of the venue" width="1600" height="1143" loading="lazy"></figure>
+      <div class="prose">
+        <p class="label">Ground plan</p>
+        <h2 class="h2">Walk the venue in 3D</h2>
+        <p>Main stage, VVIP and VIP seating, food stalls, the Heritage Moves stage and the entrance. Drag to turn the plan and tap any number to fly to it.</p>
+        <div class="btn-row"><a class="btn solid" href="#plan" data-go="plan">Open the 3D plan</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap section">
+    <div class="split">
+      <div class="prose">
+        <p class="label">Free entrance &middot; 5:00 PM</p>
+        <h2 class="h2">Heritage Moves</h2>
+        <p>Before the main show, a dance and culture showcase with masks, fire and traditional costume. Open to everyone, free of charge.</p>
+        <div class="btn-row"><a class="btn" href="#heritage" data-go="heritage">Discover Heritage Moves</a></div>
+      </div>
+      <figure class="photo"><img src="img/fire.jpg" alt="A masked dancer in a raffia skirt surrounded by sparks of fire" width="1365" height="2048" loading="lazy" style="aspect-ratio:4/5;object-fit:cover;object-position:center 30%"></figure>
+    </div>
+  </div>
+
+  <div class="wrap section">
+    <div class="sec-head"><p class="label">Photography by Dreamlense</p><h2 class="h2">From the first night</h2></div>
+    <div class="strip">
+      <a href="#gallery" data-go="gallery"><img src="img/crowd.jpg" alt="Courtyard crowd" loading="lazy"></a>
+      <a href="#gallery" data-go="gallery"><img src="img/fire.jpg" alt="Fire dancer" loading="lazy"></a>
+      <a href="#gallery" data-go="gallery"><img src="img/mask.jpg" alt="Masked dancers" loading="lazy"></a>
+      <a href="#gallery" data-go="gallery"><img src="img/stage.jpg" alt="Main stage" loading="lazy"></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE NIGHT ============ -->
+<section class="page" data-page="night" hidden>
+  <header class="page-head wrap">
+    <p class="eyebrow">Phase 1 &middot; 29 August 2025</p>
+    <h1>The Night</h1>
+    <p class="lede">One evening at Arcade Independence Square: a free cultural showcase at five, then a full live lineup from seven.</p>
+    <div class="orn"><i></i></div>
+  </header>
+
+  <div class="wrap section">
+    <div class="sec-head"><p class="label">Run of show</p><h2 class="h2">How the evening ran</h2></div>
+    <div class="timeline">
+      <div class="tl"><time>5:00 PM</time><div><h3>Heritage Moves</h3><p>Traditional dance and cultural showcase on its own stage. Free entrance.</p></div></div>
+      <div class="tl"><time>6:30 PM</time><div><h3>Doors open</h3><p>Entry for ticket holders from Bauddhaloka Mawatha.</p></div></div>
+      <div class="tl"><time>7:00 PM</time><div><h3>Main stage, onwards</h3><p>2forty2 and the artists took the stage.</p></div></div>
+    </div>
+  </div>
+
+  <div class="wrap section">
+    <div class="sec-head"><p class="label">Lineup</p><h2 class="h2">Who played</h2></div>
+    <div id="lineup"></div>
+  </div>
+
+  <div class="wrap section">
+    <div class="split">
+      <div>
+        <div class="sec-head"><p class="label">Tickets, 2025</p><h2 class="h2">Phase 1 prices</h2></div>
+        <div class="prices">
+          <div class="price"><span>Phase 01</span><b>LKR 2,500</b></div>
+          <div class="price"><span>Phase 02</span><b>LKR 3,000</b></div>
+          <div class="price"><span>VIP</span><b>LKR 5,000</b></div>
+          <div class="price"><span>VVIP, per person</span><b>LKR 6,000</b></div>
+          <div class="price"><span>VVIP, 6 pack</span><b>LKR 35,000</b></div>
+        </div>
+        <p class="muted" style="margin-top:14px">BYOB arrangement applied in 2025. Phase 2 prices will be announced before tickets open.</p>
+      </div>
+      <figure class="photo"><img src="img/stage.jpg" alt="Band performing on the main stage under a canopy of trees" width="1500" height="1000" loading="lazy"><figcaption>Main stage</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GROUND PLAN ============ -->
+<section class="page" data-page="plan" hidden>
+  <header class="page-head wrap">
+    <p class="eyebrow">Venue layout, Phase 1</p>
+    <h1>Ground Plan</h1>
+    <p class="lede">Drag to turn the venue. Tap a number, or pick a zone from the list, to fly in close.</p>
+    <div class="orn"><i></i></div>
+  </header>
+  <div class="wrap">
+    <div class="plan-stage" id="plan-stage">
+      <canvas id="plan-canvas" aria-label="Interactive 3D ground plan of the venue"></canvas>
+      <div class="pins" id="pins"></div>
+      <p class="plan-hint">Drag to rotate</p>
+      <div class="plan-tools">
+        <button type="button" id="t-spin" aria-pressed="true">Auto spin</button>
+        <button type="button" id="t-top">Top view</button>
+        <button type="button" id="t-reset">Reset</button>
+        <button type="button" id="t-in" aria-label="Zoom in">+</button>
+        <button type="button" id="t-out" aria-label="Zoom out">&minus;</button>
+      </div>
+    </div>
+    <div class="plan-fallback" id="plan-fallback" hidden>
+      <img src="img/plan.jpg" alt="Illustrated ground plan of the venue" width="2048" height="1462">
+      <p class="muted">The 3D view needs WebGL. Here is the illustrated plan instead.</p>
+    </div>
+    <div class="plan-info">
+      <div class="now" id="now" aria-live="polite"></div>
+      <ul class="legend" id="legend"></ul>
+    </div>
+    <p class="muted" style="margin-top:26px;max-width:60ch">This is the Phase 1 layout from 2025. The Phase 2 plan will be published here once the 2027 venue is confirmed.</p>
+  </div>
+</section>
+
+<!-- ============ HERITAGE MOVES ============ -->
+<section class="page" data-page="heritage" hidden>
+  <header class="page-head wrap">
+    <p class="eyebrow">Free entrance &middot; 5:00 PM</p>
+    <h1>Heritage Moves</h1>
+    <p class="lede">An immersive celebration of Sri Lankan dance and culture, set on its own stage inside the venue.</p>
+    <div class="orn"><i></i></div>
+  </header>
+  <div class="wrap section">
+    <div class="split">
+      <figure class="photo"><img src="img/fire.jpg" alt="Masked dancer with sparks and fire" width="1365" height="2048" style="aspect-ratio:4/5;object-fit:cover;object-position:center 30%"></figure>
+      <div class="prose">
+        <h2 class="h2">Culture, up close</h2>
+        <p>Heritage Moves opens the evening. Performers in masks and traditional costume work the floor around the Heritage Moves stage, close enough to feel the heat when the fire comes out.</p>
+        <p>Entrance is free. You do not need a concert ticket to watch, so bring family and friends and arrive early.</p>
+        <div class="btn-row"><a class="btn" href="#plan" data-go="plan">Find the stage on the plan</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap section">
+    <div class="split rev">
+      <figure class="photo"><img src="img/mask.jpg" alt="Dancers in red, yellow and black costume with a carved cobra mask" width="1365" height="2048" loading="lazy" style="aspect-ratio:4/5;object-fit:cover;object-position:center 20%"></figure>
+      <div class="prose">
+        <p class="label">In 2027</p>
+        <h2 class="h2">Bringing it back</h2>
+        <p>Heritage Moves returns with Phase 2. If you lead a dance troupe, make masks or costumes, or want to partner with us on the showcase, get in touch.</p>
+        <div class="btn-row"><a class="btn solid" href="#contact" data-go="contact">Contact the team</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="page" data-page="gallery" hidden>
+  <header class="page-head wrap">
+    <p class="eyebrow">Photography by Dreamlense</p>
+    <h1>Gallery</h1>
+    <p class="lede">Photo albums from Phase 1.</p>
+    <div class="orn"><i></i></div>
+  </header>
+  <div class="wrap section" id="gallery-root"></div>
+</section>
+
+<!-- ============ SHOP ============ -->
+<section class="page" data-page="shop" hidden>
+  <header class="page-head wrap">
+    <p class="eyebrow">Official merchandise</p>
+    <h1>Shop</h1>
+    <p class="lede">Take a piece of the night home. Add items to your bag and send the order to the team on WhatsApp.</p>
+    <div class="orn"><i></i></div>
+  </header>
+  <div class="wrap section">
+    <div class="notice">
+      <p>Phase 2 concert tickets are not on sale yet. Phase 1 tickets were sold through Tickets Ministry, and we will announce the Phase 2 ticket link here.</p>
+      <a class="btn small" href="https://www.ticketsministry.com" target="_blank" rel="noopener">Tickets Ministry</a>
+    </div>
+    <div class="products" id="products"></div>
+  </div>
+</section>
+
+<!-- ============ PHASE 2 ============ -->
+<section class="page" data-page="phase2" hidden>
+  <header class="page-head wrap">
+    <p class="eyebrow">Coming in 2027</p>
+    <h1>Phase 2</h1>
+    <p class="lede">Thambapanni Colombo Night returns. Here is what is confirmed and what is still to come.</p>
+    <div class="orn"><i></i></div>
+  </header>
+  <div class="wrap section">
+    <div class="status">
+      <div><span class="tag">Year</span><b>2027</b><span class="muted">Confirmed.</span></div>
+      <div><span class="tag">Date</span><b>To be announced</b><span class="muted">We will post it here first.</span></div>
+      <div><span class="tag">Venue</span><b>To be announced</b><span class="muted">Phase 1 was at Arcade Independence Square.</span></div>
+      <div><span class="tag">Lineup</span><b>To be announced</b><span class="muted">Artists will be revealed in stages.</span></div>
+    </div>
+  </div>
+  <div class="wrap section">
+    <div class="split">
+      <div class="prose">
+        <p class="label">Stay in the loop</p>
+        <h2 class="h2">Be first to know</h2>
+        <p>Message the team to register your interest, and follow us for the date, lineup and ticket release.</p>
+        <div class="btn-row">
+          <a class="btn solid" id="wa-interest" href="#" target="_blank" rel="noopener">Register interest on WhatsApp</a>
+          <a class="btn" href="https://www.ticketsministry.com" target="_blank" rel="noopener">Tickets Ministry</a>
+        </div>
+        <div class="social" data-social></div>
+      </div>
+      <figure class="photo"><img src="img/crowd.jpg" alt="Courtyard crowd at night" width="1600" height="1066" loading="lazy"></figure>
+    </div>
+  </div>
+  <div class="wrap section">
+    <div class="sec-head"><p class="label">Questions</p><h2 class="h2">Good to know</h2></div>
+    <div class="faq">
+      <details><summary>Is Phase 2 ticketed?</summary><p>The main concert was ticketed in Phase 1, with Heritage Moves open to everyone with free entrance. We expect the same structure in 2027 and will confirm it with the ticket release.</p></details>
+      <details><summary>Where will Phase 2 be held?</summary><p>The venue for 2027 is still to be announced. Phase 1 took place at Arcade Independence Square, Colombo.</p></details>
+      <details><summary>Can I bring my own drinks?</summary><p>Phase 1 tickets were BYOB. The Phase 2 policy will be published with the ticket details.</p></details>
+      <details><summary>What time should I arrive?</summary><p>In 2025, Heritage Moves started at 5:00 PM, doors opened at 6:30 PM and the main show began at 7:00 PM.</p></details>
+      <details><summary>Can I perform or set up a stall?</summary><p>Contact the team through the Contact page with your details. Heritage Moves performers, food stalls and partners are all welcome to ask.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="page" data-page="contact" hidden>
+  <header class="page-head wrap">
+    <p class="eyebrow">Star Gate Events (Pvt) Ltd</p>
+    <h1>Contact</h1>
+    <p class="lede">For tickets, partnerships, performers and press, call or message the team.</p>
+    <div class="orn"><i></i></div>
+  </header>
+  <div class="wrap section">
+    <div class="cards" id="contacts"></div>
+  </div>
+  <div class="wrap section">
+    <div class="split">
+      <div class="prose">
+        <p class="label">Phase 1 venue</p>
+        <h2 class="h2">Arcade Independence Square</h2>
+        <p>Colombo. Entrance from Bauddhaloka Mawatha. The Phase 2 venue will be announced.</p>
+        <div class="btn-row"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Arcade+Independence+Square+Colombo" target="_blank" rel="noopener">Open in Maps</a></div>
+      </div>
+      <div class="prose">
+        <p class="label">Follow</p>
+        <h2 class="h2">Social</h2>
+        <div class="social" data-social></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="prose">
+      <a class="brand" href="#home" data-go="home"><b>THAMBAPANNI</b><span>Colombo Night</span></a>
+      <p class="small">An event by Star Gate Events (Pvt) Ltd. Named for Thambapanni, the ancient name of Sri Lanka.</p>
+      <div class="social" data-social></div>
+    </div>
+    <div>
+      <p class="label" style="margin-bottom:14px">Explore</p>
+      <ul>
+        <li><a href="#night" data-go="night">The Night</a></li>
+        <li><a href="#plan" data-go="plan">Ground Plan</a></li>
+        <li><a href="#heritage" data-go="heritage">Heritage Moves</a></li>
+        <li><a href="#gallery" data-go="gallery">Gallery</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="label" style="margin-bottom:14px">Join us</p>
+      <ul>
+        <li><a href="#shop" data-go="shop">Shop</a></li>
+        <li><a href="#phase2" data-go="phase2">Phase 2, 2027</a></li>
+        <li><a href="#contact" data-go="contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="legal"><div class="wrap"><span>&copy; 2026 Star Gate Events (Pvt) Ltd</span><span>Event photography by Dreamlense</span></div></div>
+</footer>
+
+<!-- cart -->
+<div id="cart-bd" hidden></div>
+<aside id="cart" role="dialog" aria-label="Your bag" aria-modal="true" hidden>
+  <header><h2>Your bag</h2><button class="lb-btn" id="cart-x" type="button" aria-label="Close bag">&times;</button></header>
+  <div class="items" id="cart-items"></div>
+  <footer>
+    <div class="total"><span>Total</span><span id="cart-total">LKR 0</span></div>
+    <a class="btn solid" id="cart-wa" href="#" target="_blank" rel="noopener">Send order on WhatsApp</a>
+    <button class="btn small" id="cart-copy" type="button">Copy order text</button>
+    <p class="muted" style="font-size:1rem">Sizes, colours and delivery are confirmed with the team after you send your order.</p>
+  </footer>
+</aside>
+
+<!-- lightbox -->
+<div id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+  <button class="lb-btn lb-close" id="lb-x" type="button" aria-label="Close">&times;</button>
+  <div class="lb-stage"><img id="lb-img" alt=""></div>
+  <div class="lb-bar">
+    <button class="lb-btn" id="lb-prev" type="button" aria-label="Previous photo">&lsaquo;</button>
+    <span id="lb-cap"></span>
+    <button class="lb-btn" id="lb-next" type="button" aria-label="Next photo">&rsaquo;</button>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+/* =====================================================================
+   SITE SETTINGS. Edit this block to update contacts, links, prices, albums.
+   ===================================================================== */
+const CONFIG = {
+  producer: 'Star Gate Events (Pvt) Ltd',
+  whatsapp: '94779550171',             // WhatsApp number, country code first, no + or spaces
+  ticketUrl: 'https://www.ticketsministry.com',
+  social: {                            // replace with your real page links
+    facebook:  'https://www.facebook.com/',
+    instagram: 'https://www.instagram.com/',
+    tiktok:    'https://www.tiktok.com/'
+  },
+  contacts: [
+    { name: 'Nadeesha', phone: '070 590 4903' },
+    { name: 'Sandinu',  phone: '077 955 0171' }
+  ]
+};
+
+/* Lineup. Set photo to a path like 'img/raini.jpg' to replace a placeholder. */
+const LINEUP = {
+  headliner: { name: '2forty2', role: 'Live band', photo: null },
+  artists: [
+    { name: 'Raini Charuka Goonathilake', photo: null },
+    { name: 'Mihindu Ariyaratne', photo: null },
+    { name: 'Ridma Weerawardena', photo: null },
+    { name: 'Billy Fernando', photo: null }
+  ]
+};
+
+/* Shop. Replace prices, names and set img to a product photo path. */
+const PRODUCTS = [
+  { id: 'tee',    name: 'Event tee',          price: 3500, note: 'Black cotton, gold print.', img: null },
+  { id: 'cap',    name: 'Heritage Moves cap', price: 2500, note: 'Black cap, gold stitching.', img: null },
+  { id: 'tote',   name: 'Canvas tote',        price: 1800, note: 'Heavy canvas, logo print.', img: null },
+  { id: 'poster', name: 'Logo poster, A2',    price: 2000, note: 'Gold foil on black stock.', img: null },
+  { id: 'pin',    name: 'Enamel pin',         price: 1200, note: 'Gold-plated, flourish design.', img: null },
+  { id: 'mask',   name: 'Miniature mask',     price: 4500, note: 'Hand-painted keepsake.', img: null }
+];
+
+/* Photo albums. A photo is { src, alt }. A null entry shows a placeholder slot.
+   To replace a slot, swap null for { src: 'img/your-photo.jpg', alt: 'what is in the photo' }. */
+const P = (src, alt) => ({ src, alt });
+const slots = (n, real) => Array.from({ length: n }, (_, i) => real[i] || null);
+const ALBUMS = [
+  { id: 'courtyard', title: 'The Courtyard', blurb: 'Tables, string lights and the crowd.',
+    photos: slots(8, [P('img/crowd.jpg', 'Crowd at long tables in the courtyard')]) },
+  { id: 'heritage', title: 'Heritage Moves', blurb: 'Masks, fire and traditional costume.',
+    photos: slots(8, [P('img/fire.jpg', 'Masked dancer with sparks'), P('img/mask.jpg', 'Dancers with a carved cobra mask')]) },
+  { id: 'stage', title: 'Main Stage', blurb: 'The band under the trees.',
+    photos: slots(8, [P('img/stage.jpg', 'Band on the main stage')]) },
+  { id: '2forty2', title: '2forty2 Live', blurb: 'The headline set.', photos: slots(8, []) },
+  { id: 'artists', title: 'Artist Moments', blurb: 'On stage and backstage.', photos: slots(8, []) },
+  { id: 'bts', title: 'Behind the Scenes', blurb: 'Setup, crew and the final hour.', photos: slots(8, []) }
+];
+
+/* ===================================================================== */
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const money = n => 'LKR ' + n.toLocaleString('en-US');
+const ICON_IMG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="16" rx="1"/><circle cx="9" cy="10" r="1.8"/><path d="M3 18l6-5 4 3 3-2 5 4"/></svg>';
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function waLink(text) { return 'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(text); }
+async function copyText(text, btn) {
+  const old = btn.textContent;
+  try { await navigator.clipboard.writeText(text); btn.textContent = 'Copied'; }
+  catch (e) { btn.textContent = 'Select and copy'; }
+  setTimeout(() => { btn.textContent = old; }, 1800);
+}
+
+/* ---------- static content ---------- */
+(function fill() {
+  $('#home-lineup').textContent = [LINEUP.headliner.name].concat(LINEUP.artists.map(a => a.name)).join(', ') + '.';
+  const ph = label => '<div class="ph">' + ICON_IMG + '<span>' + esc(label) + '</span></div>';
+  const pic = (a, label) => a.photo ? '<img src="' + esc(a.photo) + '" alt="' + esc(a.name) + '" style="width:100%;height:100%;object-fit:cover">' : ph(label);
+  const h = LINEUP.headliner;
+  $('#lineup').innerHTML =
+    '<div class="headliner"><div>' + (h.photo ? '<img src="' + esc(h.photo) + '" alt="' + esc(h.name) + '" style="width:100%;height:100%;object-fit:cover">' : ph('Band photo')) + '</div>' +
+    '<div class="txt"><p class="label">Headline act</p><h3>' + esc(h.name) + '</h3><p class="muted">' + esc(h.role) + ', main stage.</p></div></div>' +
+    '<div class="artists">' + LINEUP.artists.map(a => '<div class="artist"><div style="aspect-ratio:3/4">' + pic(a, 'Artist photo').replace('class="ph"', 'class="ph" style="height:100%"') + '</div><div><p class="label">Artist</p><h3>' + esc(a.name) + '</h3></div></div>').join('') + '</div>';
+
+  const S = CONFIG.social;
+  const ico = {
+    facebook: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.8c0-.9.3-1.5 1.6-1.5h1.7V3.4c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2v2.3H7.5V13h2.8v8h3.2z"/></svg>',
+    instagram: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>',
+    tiktok: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 3c.3 2.3 1.7 3.9 4 4.1v3.1c-1.4 0-2.7-.4-4-1.2v6.2c0 3.2-2.6 5.8-5.8 5.8S4.9 18.4 4.9 15.2s2.6-5.8 5.8-5.8c.3 0 .6 0 .9.1v3.2a2.7 2.7 0 1 0 1.9 2.6V3h3.1z"/></svg>'
+  };
+  const html = Object.keys(S).map(k => '<a href="' + esc(S[k]) + '" target="_blank" rel="noopener" aria-label="' + k + '">' + ico[k] + '</a>').join('');
+  $$('[data-social]').forEach(el => { el.innerHTML = html; });
+
+  $('#contacts').innerHTML = CONFIG.contacts.map(c =>
+    '<div class="card"><p class="label">Call or WhatsApp</p><h3>' + esc(c.name) + '</h3><p class="phone">' + esc(c.phone) + '</p>' +
+    '<div class="btn-row"><button class="btn small" type="button" data-copy="' + esc(c.phone) + '">Copy number</button></div></div>').join('') +
+    '<div class="card"><p class="label">Message</p><h3>WhatsApp</h3><p class="muted">Fastest way to reach the team about tickets, stalls and partnerships.</p><div class="btn-row"><a class="btn small solid" id="wa-contact" href="#" target="_blank" rel="noopener">Open WhatsApp</a></div></div>';
+  $$('[data-copy]').forEach(b => b.addEventListener('click', () => copyText(b.dataset.copy, b)));
+  $('#wa-contact').href = waLink('Hello Star Gate Events, I have a question about Thambapanni Colombo Night.');
+  $('#wa-interest').href = waLink('Hello Star Gate Events, please keep me updated about Thambapanni Colombo Night Phase 2 (2027).');
+})();
+
+/* ---------- router ---------- */
+const PAGES = ['home', 'night', 'plan', 'heritage', 'gallery', 'shop', 'phase2', 'contact'];
+let current = null;
+function go(name, scroll = true) {
+  if (!PAGES.includes(name)) name = 'home';
+  $$('.page').forEach(p => { p.hidden = p.dataset.page !== name; });
+  $$('.nav a').forEach(a => { if (a.dataset.go === name) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
+  $('#nav').classList.remove('open'); $('#menu-btn').setAttribute('aria-expanded', 'false');
+  if (current === 'plan' && name !== 'plan') Plan.stop();
+  if (name === 'plan') Plan.start();
+  if (name === 'gallery') Gallery.home();
+  current = name;
+  try { if (location.hash !== '#' + name) history.replaceState(null, '', '#' + name); } catch (e) { try { location.hash = name; } catch (e2) {} }
+  if (scroll) window.scrollTo(0, 0);
+}
+document.addEventListener('click', e => {
+  const a = e.target.closest('[data-go]');
+  if (a) { e.preventDefault(); go(a.dataset.go); }
+});
+window.addEventListener('hashchange', () => go(location.hash.slice(1), true));
+$('#menu-btn').addEventListener('click', () => {
+  const open = $('#nav').classList.toggle('open');
+  $('#menu-btn').setAttribute('aria-expanded', String(open));
+});
+
+/* ---------- gallery ---------- */
+const Gallery = (function () {
+  const root = $('#gallery-root');
+  let items = [], idx = 0;
+  const ph = n => '<div class="ph">' + ICON_IMG + '<span>Photo slot ' + String(n).padStart(2, '0') + '</span></div>';
+  function home() {
+    root.innerHTML = '<div class="albums">' + ALBUMS.map(a => {
+      const real = a.photos.filter(Boolean);
+      return '<button class="album" type="button" data-album="' + a.id + '"><div class="cover">' +
+        (real[0] ? '<img src="' + esc(real[0].src) + '" alt="' + esc(real[0].alt) + '" loading="lazy">' : '<div class="ph">' + ICON_IMG + '<span>Album cover</span></div>') +
+        '</div><div><h3>' + esc(a.title) + '</h3><p>' + esc(a.blurb) + ' ' + (real.length ? real.length + (real.length === 1 ? ' photo.' : ' photos.') : 'Photos coming soon.') + '</p></div></button>';
+    }).join('') + '</div>';
+    $$('.album', root).forEach(b => b.addEventListener('click', () => open(b.dataset.album)));
+  }
+  function open(id) {
+    const a = ALBUMS.find(x => x.id === id);
+    root.innerHTML = '<button class="btn small back" type="button" id="g-back">&lsaquo; All albums</button><div class="sec-head"><h2 class="h2">' + esc(a.title) + '</h2><p class="muted">' + esc(a.blurb) + '</p></div>' +
+      '<div class="thumbs">' + a.photos.map((p, i) => p
+        ? '<button class="thumb" type="button" data-i="' + i + '"><img src="' + esc(p.src) + '" alt="' + esc(p.alt) + '" loading="lazy"></button>'
+        : ph(i + 1)).join('') + '</div>';
+    $('#g-back').addEventListener('click', () => { home(); window.scrollTo(0, 0); });
+    items = a.photos.filter(Boolean);
+    $$('.thumb', root).forEach(t => t.addEventListener('click', () => {
+      const p = a.photos[+t.dataset.i]; show(items.indexOf(p));
+    }));
+    window.scrollTo(0, 0);
+  }
+  const lb = $('#lb');
+  function show(i) {
+    idx = (i + items.length) % items.length;
+    const p = items[idx];
+    $('#lb-img').src = p.src; $('#lb-img').alt = p.alt;
+    $('#lb-cap').textContent = (idx + 1) + ' / ' + items.length;
+    lb.hidden = false; $('#lb-x').focus();
+  }
+  function close() { lb.hidden = true; }
+  $('#lb-x').addEventListener('click', close);
+  $('#lb-prev').addEventListener('click', () => show(idx - 1));
+  $('#lb-next').addEventListener('click', () => show(idx + 1));
+  lb.addEventListener('click', e => { if (e.target === lb || e.target.classList.contains('lb-stage')) close(); });
+  document.addEventListener('keydown', e => {
+    if (lb.hidden) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') show(idx - 1);
+    if (e.key === 'ArrowRight') show(idx + 1);
+  });
+  return { home };
+})();
+
+/* ---------- shop + cart ---------- */
+const Cart = (function () {
+  const state = {};
+  const grid = $('#products');
+  grid.innerHTML = PRODUCTS.map(p =>
+    '<div class="product">' + (p.img ? '<img src="' + esc(p.img) + '" alt="' + esc(p.name) + '" style="aspect-ratio:1/1;object-fit:cover;width:100%">' : '<div class="ph">' + ICON_IMG + '<span>Product photo</span></div>') +
+    '<div><h3>' + esc(p.name) + '</h3><p>' + esc(p.note) + '</p></div>' +
+    '<div class="buy"><b>' + money(p.price) + '</b><button class="btn small" type="button" data-add="' + p.id + '">Add to bag</button></div></div>').join('');
+  $$('[data-add]', grid).forEach(b => b.addEventListener('click', () => { add(b.dataset.add, 1); b.textContent = 'Added'; setTimeout(() => { b.textContent = 'Add to bag'; }, 1200); }));
+  const count = () => Object.values(state).reduce((a, b) => a + b, 0);
+  const total = () => PRODUCTS.reduce((s, p) => s + (state[p.id] || 0) * p.price, 0);
+  function orderText() {
+    const lines = PRODUCTS.filter(p => state[p.id]).map(p => '- ' + p.name + ' x' + state[p.id] + ' (' + money(p.price * state[p.id]) + ')');
+    return 'Hello Star Gate Events, I would like to order:\n' + lines.join('\n') + '\nTotal: ' + money(total());
+  }
+  function render() {
+    $('#bag-n').textContent = count();
+    const items = PRODUCTS.filter(p => state[p.id]);
+    $('#cart-items').innerHTML = items.length ? items.map(p =>
+      '<div class="line"><b>' + esc(p.name) + '</b><span>' + money(p.price * state[p.id]) + '</span>' +
+      '<div class="qty"><button type="button" data-q="' + p.id + '" data-d="-1" aria-label="Fewer ' + esc(p.name) + '">&minus;</button><span>' + state[p.id] + '</span><button type="button" data-q="' + p.id + '" data-d="1" aria-label="More ' + esc(p.name) + '">+</button></div></div>').join('')
+      : '<p class="muted" style="padding:20px 0">Your bag is empty. Add something from the shop.</p>';
+    $$('[data-q]', $('#cart-items')).forEach(b => b.addEventListener('click', () => add(b.dataset.q, +b.dataset.d)));
+    $('#cart-total').textContent = money(total());
+    const wa = $('#cart-wa'); wa.href = items.length ? waLink(orderText()) : '#';
+    wa.style.opacity = items.length ? 1 : .45; wa.style.pointerEvents = items.length ? 'auto' : 'none';
+  }
+  function add(id, d) { state[id] = Math.max(0, (state[id] || 0) + d); if (!state[id]) delete state[id]; render(); }
+  const open = () => { $('#cart').hidden = false; $('#cart-bd').hidden = false; $('#cart-x').focus(); };
+  const close = () => { $('#cart').hidden = true; $('#cart-bd').hidden = true; };
+  $('#bag-btn').addEventListener('click', open);
+  $('#cart-x').addEventListener('click', close);
+  $('#cart-bd').addEventListener('click', close);
+  $('#cart-copy').addEventListener('click', e => copyText(count() ? orderText() : 'Your bag is empty', e.currentTarget));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !$('#cart').hidden) close(); });
+  render();
+})();
+
+/* ---------- 3D ground plan ---------- */
+const Plan = (function () {
+  const ZONES = [
+    { id: '01', name: 'Main Stage', desc: 'The main concert stage. 2forty2 and the artists performed here from 7:00 PM.', focus: [-48, 0, -22], lab: [-48, 15, -24] },
+    { id: '02', name: 'VVIP Area', desc: 'Table seating closest to the stage, sold per person or as a 6 pack.', focus: [-34, 0, -1], lab: [-34, 5, -1] },
+    { id: '03', name: 'VIP Area', desc: 'Seated blocks beside and behind the VVIP tables.', focus: [2, 0, -1], lab: [2, 5, -1] },
+    { id: '04', name: 'Beer Shop', desc: 'The bar, set back from the stage next to the wash rooms.', focus: [22, 0, -30], lab: [22, 9, -30] },
+    { id: '05', name: 'Wash Rooms', desc: 'Wash rooms, beside the beer shop.', focus: [37, 0, -30], lab: [37, 9, -30] },
+    { id: '06', name: 'Food Stalls', desc: 'Two covered stalls on a raised platform near the front of the venue.', focus: [-28, 0, 27], lab: [-28, 12, 27] },
+    { id: '07', name: 'Standing Area', desc: 'Open floor around both stages for standing ticket holders.', focus: [30, 0, 0], lab: [30, 3, -6] },
+    { id: '08', name: 'Heritage Moves Stage', desc: 'Home of the free-entrance dance and culture showcase, from 5:00 PM.', focus: [38, 0, 20], lab: [38, 6, 20] },
+    { id: '09', name: 'Entrance', desc: 'Main entrance from Bauddhaloka Mawatha. Doors opened at 6:30 PM.', focus: [60, 0, 27], lab: [64, 11, 27] }
+  ];
+  let ok = false, started = false, running = false, raf = 0;
+  let renderer, scene, camera, wrap, canvas;
+  let az = 0.28, pol = 1.0, rad = 150, tgt, base = { az: .28, pol: 1.0, rad: 150 };
+  let spin = !reduceMotion, selected = null, hover = null, dragging = false, lastInput = 0, anim = null, t0 = 0;
+  const pins = {}; let sparks, sparkData, bulbsA, bulbsB, arrows = [];
+
+  const GOLD = 0xc9a96a;
+  function build() {
+    const T = THREE;
+    scene = new T.Scene(); scene.fog = new T.Fog(0x0a0908, 190, 360);
+    camera = new T.PerspectiveCamera(38, 1.6, 1, 800);
+    tgt = new T.Vector3(0, 0, 4);
+    scene.add(new T.AmbientLight(0xffe9c9, .55));
+    scene.add(new T.HemisphereLight(0xfff0d6, 0x1a120a, .45));
+    const sun = new T.DirectionalLight(0xffe1b0, .95); sun.position.set(-50, 90, 70); scene.add(sun);
+
+    ZONES.forEach(z => { z.mats = []; z.lines = []; z.glow = 0; z.group = new T.Group(); scene.add(z.group);
+      z.lineMat = new T.LineBasicMaterial({ color: 0x8d7545, transparent: true, opacity: .55 }); z.lines.push(z.lineMat); });
+    const Z = id => ZONES.find(z => z.id === id);
+    const M = (z, color, rough) => { const m = new T.MeshStandardMaterial({ color, roughness: rough == null ? .8 : rough, metalness: .1 }); z.mats.push(m); return m; };
+    const box = (z, w, h, d, x, y, zz, color, edge) => {
+      const m = new T.Mesh(new T.BoxGeometry(w, h, d), M(z, color)); m.position.set(x, y, zz); z.group.add(m);
+      if (edge !== false) m.add(new T.LineSegments(new T.EdgesGeometry(m.geometry), z.lineMat));
+      return m;
+    };
+    const inst = (z, w, h, d, color, pts) => {
+      const im = new T.InstancedMesh(new T.BoxGeometry(w, h, d), M(z, color), pts.length); const o = new T.Object3D();
+      pts.forEach((p, i) => { o.position.set(p[0], p[1], p[2]); o.updateMatrix(); im.setMatrixAt(i, o.matrix); }); z.group.add(im); return im;
+    };
+
+    // ground slab + grid
+    const slab = new T.Mesh(new T.BoxGeometry(140, 1.4, 90), new T.MeshStandardMaterial({ color: 0x16120e, roughness: .95 }));
+    slab.position.y = -.8; scene.add(slab);
+    slab.add(new T.LineSegments(new T.EdgesGeometry(slab.geometry), new T.LineBasicMaterial({ color: GOLD, transparent: true, opacity: .8 })));
+    const grid = new T.GridHelper(140, 28, 0x3a3123, 0x241e16); grid.scale.z = 90 / 140; grid.position.y = .02; scene.add(grid);
+
+    // 01 main stage
+    let z = Z('01'); const sx = -48, sz = -24;
+    box(z, 28, 3, 17, sx, 1.5, sz, 0x1b1815);
+    const wallTex = (() => { const c = document.createElement('canvas'); c.width = 256; c.height = 96; const g = c.getContext('2d');
+      g.fillStyle = '#1a130a'; g.fillRect(0, 0, 256, 96);
+      for (let i = 0; i < 26; i++) { const h = 20 + ((i * 37) % 60), w = 6 + (i % 3) * 3; g.fillStyle = ['#c9a96a', '#8d7545', '#e0c58a', '#6b4f2a'][i % 4]; g.fillRect(i * 10, 96 - h, w, h); }
+      return new T.CanvasTexture(c); })();
+    const led = new T.Mesh(new T.PlaneGeometry(22, 8), new T.MeshBasicMaterial({ map: wallTex })); led.position.set(sx, 7.2, sz - 7.5); z.group.add(led);
+    [[-13, -8], [13, -8], [-13, 8], [13, 8]].forEach(p => box(z, .9, 13, .9, sx + p[0], 6.5, sz + p[1], 0x2a251d, false));
+    const roof = box(z, 29, .9, 18, sx, 13.4, sz, 0x100e0c); roof.rotation.x = -.05;
+    box(z, 3.2, 8, 3.2, sx - 17, 4, sz + 2, 0x141210); box(z, 3.2, 8, 3.2, sx + 17, 4, sz + 2, 0x141210);
+
+    // 02 VVIP tables
+    z = Z('02'); const tp = [], bp = [];
+    [-9, -3.5, 2, 7.5].forEach(rz => [-46, -40, -34, -28, -22].forEach(rx => { tp.push([rx, 1.4, rz]); bp.push([rx, .4, rz - 1.7], [rx, .4, rz + 1.7]); }));
+    inst(z, 4.6, .35, 2.4, 0x6b4a28, tp); inst(z, 4.4, .8, .7, 0x3a2c1c, bp);
+    tp.forEach(p => { const b = new T.Mesh(new T.BoxGeometry(1, 1.3, 1), M(z, 0x2a1f14)); b.position.set(p[0], .65, p[2]); z.group.add(b); });
+
+    // 03 VIP seating
+    z = Z('03'); const cp = [];
+    [[-6, -6], [11, -6], [-6, 4], [11, 4]].forEach(b => { for (let r = 0; r < 3; r++) for (let c = 0; c < 9; c++) cp.push([b[0] - 7 + c * 1.7, .55, b[1] + r * 2]); });
+    inst(z, 1.2, 1.1, 1.2, 0x4a3d2a, cp);
+    box(z, 40, .15, 18, 2, .08, -1, 0x1c1812, true);
+
+    // 04 beer shop, 05 wash rooms
+    z = Z('04'); box(z, 10, 5, 7, 22, 2.5, -30, 0x3a3226); box(z, 11, .7, 8, 22, 5.3, -30, 0xb5632f);
+    z = Z('05'); box(z, 11, 5, 8, 37, 2.5, -30, 0x2a2620); box(z, 12, .7, 9, 37, 5.3, -30, 0x14120f); box(z, 3, 3.6, .3, 37, 1.8, -25.9, 0x090807, false);
+
+    // 06 food stalls
+    z = Z('06'); box(z, 28, 1, 14, -28, .5, 27, 0x1a1612);
+    [[-34, 0xd1a64a], [-22, 0xb5532f]].forEach(s => {
+      box(z, 9, 2.6, 5, s[0], 2.3, 27, 0x3a3226);
+      const tent = new T.Mesh(new T.ConeGeometry(7.5, 4.5, 4), M(z, s[1])); tent.rotation.y = Math.PI / 4; tent.position.set(s[0], 8.2, 27); z.group.add(tent);
+      tent.add(new T.LineSegments(new T.EdgesGeometry(tent.geometry), z.lineMat));
+      [[-4, -2.4], [4, -2.4], [-4, 2.4], [4, 2.4]].forEach(p => box(z, .3, 5.2, .3, s[0] + p[0], 4.1, 27 + p[1], 0x8d7545, false));
+    });
+
+    // 07 standing area
+    z = Z('07'); box(z, 48, .12, 54, 42, .06, 2, 0x241d14); box(z, 30, .12, 22, 3, .06, 27, 0x241d14);
+
+    // 08 heritage stage
+    z = Z('08'); const hs = box(z, 20, 1.4, 20, 38, .7, 20, 0x2a251d);
+    const tex = (() => { const c = document.createElement('canvas'); c.width = c.height = 512; const g = c.getContext('2d');
+      g.fillStyle = '#1b1712'; g.fillRect(0, 0, 512, 512); g.strokeStyle = '#8d7545'; g.lineWidth = 6; g.strokeRect(18, 18, 476, 476);
+      g.fillStyle = '#c9a96a'; g.textAlign = 'center'; g.font = '700 72px Georgia, serif'; g.fillText('HERITAGE', 256, 210); g.fillText('MOVES', 256, 290);
+      g.font = '400 40px Georgia, serif'; g.fillText('S T A G E', 256, 370); return new T.CanvasTexture(c); })();
+    const top = new T.Mesh(new T.PlaneGeometry(19.2, 19.2), new T.MeshBasicMaterial({ map: tex })); top.rotation.x = -Math.PI / 2; top.position.set(38, 1.42, 20); z.group.add(top);
+
+    // 09 entrance
+    z = Z('09'); box(z, 1.1, 9, 1.1, 66, 4.5, 20, 0x2a251d); box(z, 1.1, 9, 1.1, 66, 4.5, 34, 0x2a251d); box(z, 1.6, 1.4, 16, 66, 9.4, 27, 0x8d7545);
+    [0, 1, 2].forEach(i => { const a = new T.Mesh(new T.ConeGeometry(2.2, 4.4, 3), M(z, GOLD)); a.rotation.z = Math.PI / 2; a.rotation.x = Math.PI / 2; a.position.set(58 - i * 7, .4, 27); a.scale.set(1, 1, .35); a.userData.base = 58 - i * 7; z.group.add(a); arrows.push(a); });
+
+    // string lights over standing area
+    const dot = (() => { const c = document.createElement('canvas'); c.width = c.height = 64; const g = c.getContext('2d'); const r = g.createRadialGradient(32, 32, 0, 32, 32, 32);
+      r.addColorStop(0, 'rgba(255,236,190,1)'); r.addColorStop(.35, 'rgba(255,200,120,.65)'); r.addColorStop(1, 'rgba(255,190,100,0)'); g.fillStyle = r; g.fillRect(0, 0, 64, 64); return new T.CanvasTexture(c); })();
+    const pa = [], pb = [];
+    [-8, 8, 30].forEach((lz, li) => { for (let i = 0; i <= 30; i++) { const t = i / 30, x = 20 + t * 44, y = 14 - Math.sin(Math.PI * t) * 2.4; (i % 2 ? pa : pb).push(x, y, lz); } });
+    [20, 64].forEach(px => [-8, 8, 30].forEach(pz => { const p = new T.Mesh(new T.CylinderGeometry(.18, .18, 14, 6), new T.MeshBasicMaterial({ color: 0x3a3123 })); p.position.set(px, 7, pz); scene.add(p); }));
+    const bm = () => new T.PointsMaterial({ size: 3.2, map: dot, transparent: true, depthWrite: false, blending: T.AdditiveBlending, sizeAttenuation: true });
+    const mk = a => { const g = new T.BufferGeometry(); g.setAttribute('position', new T.Float32BufferAttribute(a, 3)); return new T.Points(g, bm()); };
+    bulbsA = mk(pa); bulbsB = mk(pb); scene.add(bulbsA, bulbsB);
+
+    // sparks above the Heritage stage
+    const N = 70, sp = new Float32Array(N * 3); sparkData = [];
+    for (let i = 0; i < N; i++) sparkData.push({ x: 38 + (Math.random() - .5) * 8, y: Math.random() * 9, z: 20 + (Math.random() - .5) * 8, v: .04 + Math.random() * .08, d: Math.random() * 6 });
+    const sg = new T.BufferGeometry(); sg.setAttribute('position', new T.BufferAttribute(sp, 3));
+    sparks = new T.Points(sg, new T.PointsMaterial({ size: 1.6, map: dot, color: 0xff9a3c, transparent: true, depthWrite: false, blending: T.AdditiveBlending }));
+    scene.add(sparks);
+  }
+
+  function buildUi() {
+    const pinsEl = $('#pins');
+    pinsEl.innerHTML = ZONES.map(z => '<button class="pin" type="button" data-id="' + z.id + '" aria-label="' + esc(z.name) + '">' + z.id + '</button>').join('');
+    $$('.pin', pinsEl).forEach(b => { pins[b.dataset.id] = b;
+      b.addEventListener('click', () => select(b.dataset.id));
+      b.addEventListener('pointerenter', () => { hover = b.dataset.id; }); b.addEventListener('pointerleave', () => { hover = null; }); });
+    $('#legend').innerHTML = ZONES.map(z => '<li><button type="button" data-id="' + z.id + '"><i>' + z.id + '</i><span>' + esc(z.name) + '</span></button></li>').join('');
+    $$('#legend button').forEach(b => { b.addEventListener('click', () => { select(b.dataset.id); }); b.addEventListener('pointerenter', () => { hover = b.dataset.id; }); b.addEventListener('pointerleave', () => { hover = null; }); });
+    now();
+  }
+  function now() {
+    const z = ZONES.find(q => q.id === selected);
+    $('#now').innerHTML = z ? '<p class="label">Zone ' + z.id + '</p><h3>' + esc(z.name) + '</h3><p>' + esc(z.desc) + '</p>'
+      : '<p class="label">Explore</p><h3>Tap a number</h3><p class="muted">Select a zone on the plan or from the list to see what it is and fly the camera to it.</p>';
+    $$('#legend button').forEach(b => b.classList.toggle('on', b.dataset.id === selected));
+    Object.keys(pins).forEach(k => pins[k].classList.toggle('on', k === selected));
+  }
+
+  const fitRad = () => { const a = camera.aspect; return 150 * Math.max(1, 1.5 / a); };
+  function tween(to, dur) {
+    if (reduceMotion) { az = to.az; pol = to.pol; rad = to.rad; tgt.set(to.x, 0, to.z); anim = null; return; }
+    anim = { t: performance.now(), dur: dur || 1000, from: { az, pol, rad, x: tgt.x, z: tgt.z }, to };
+  }
+  function select(id) {
+    selected = id; spin = false; $('#t-spin').setAttribute('aria-pressed', 'false'); now();
+    const z = ZONES.find(q => q.id === id);
+    const big = id === '07' || id === '03' || id === '02';
+    tween({ az: az, pol: .95, rad: fitRad() * (big ? .62 : .4), x: z.focus[0], z: z.focus[2] });
+  }
+  function reset() { selected = null; now(); tween({ az: base.az, pol: base.pol, rad: fitRad(), x: 0, z: 4 }); }
+  const norm = a => { while (a > Math.PI) a -= Math.PI * 2; while (a < -Math.PI) a += Math.PI * 2; return a; };
+
+  function resize() {
+    if (!ok) return;
+    const w = wrap.clientWidth, h = wrap.clientHeight; if (!w || !h) return;
+    renderer.setSize(w, h, false); camera.aspect = w / h; camera.updateProjectionMatrix();
+    if (!selected && !anim) rad = fitRad();
+  }
+  function frame(now_) {
+    if (!running) return;
+    raf = requestAnimationFrame(frame);
+    const t = now_ / 1000;
+    if (anim) {
+      let k = Math.min(1, (now_ - anim.t) / anim.dur); const e = k < .5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2;
+      az = anim.from.az + norm(anim.to.az - anim.from.az) * e; pol = anim.from.pol + (anim.to.pol - anim.from.pol) * e; rad = anim.from.rad + (anim.to.rad - anim.from.rad) * e;
+      tgt.set(anim.from.x + (anim.to.x - anim.from.x) * e, 0, anim.from.z + (anim.to.z - anim.from.z) * e); if (k >= 1) anim = null;
+    } else if (spin && !dragging && performance.now() - lastInput > 2500) az += .0022;
+    const sp = Math.sin(pol);
+    camera.position.set(tgt.x + rad * sp * Math.sin(az), tgt.y + rad * Math.cos(pol), tgt.z + rad * sp * Math.cos(az)); camera.lookAt(tgt);
+    // glow
+    ZONES.forEach(z => { const target = (selected === z.id || hover === z.id) ? 1 : 0; z.glow += (target - z.glow) * .12; const g = z.glow;
+      z.mats.forEach(m => m.emissive.setRGB(.5 * g, .38 * g, .14 * g)); z.lineMat.color.setRGB(.55 + .33 * g, .46 + .33 * g, .27 + .3 * g); z.lineMat.opacity = .55 + .45 * g; });
+    bulbsA.material.opacity = .65 + .35 * Math.sin(t * 2.1); bulbsB.material.opacity = .65 + .35 * Math.sin(t * 2.1 + 2.4);
+    const pos = sparks.geometry.attributes.position;
+    sparkData.forEach((s, i) => { s.y += s.v; if (s.y > 10) { s.y = 1.6; s.x = 38 + (Math.random() - .5) * 8; s.z = 20 + (Math.random() - .5) * 8; } pos.setXYZ(i, s.x + Math.sin(t + s.d) * .5, s.y, s.z); }); pos.needsUpdate = true;
+    arrows.forEach(a => { a.position.x = a.userData.base - ((t * 6) % 7); });
+    renderer.render(scene, camera);
+    // pins
+    const w = wrap.clientWidth, h = wrap.clientHeight, v = new THREE.Vector3();
+    ZONES.forEach(z => { v.set(z.lab[0], z.lab[1], z.lab[2]).project(camera); const p = pins[z.id]; if (v.z > 1 || v.z < -1) { p.style.display = 'none'; return; }
+      p.style.display = ''; p.style.transform = 'translate(' + ((v.x * .5 + .5) * w).toFixed(1) + 'px,' + ((-v.y * .5 + .5) * h).toFixed(1) + 'px)'; });
+  }
+
+  function bindInput() {
+    let px = 0, py = 0, moved = 0;
+    wrap.addEventListener('pointerdown', e => { if (e.target.closest('button')) return; dragging = true; moved = 0; px = e.clientX; py = e.clientY; wrap.classList.add('drag'); anim = null; });
+    window.addEventListener('pointermove', e => { if (!dragging) return; const dx = e.clientX - px, dy = e.clientY - py; px = e.clientX; py = e.clientY; moved += Math.abs(dx) + Math.abs(dy);
+      az -= dx * .006; if (e.pointerType === 'mouse') pol = Math.min(1.4, Math.max(.2, pol - dy * .005)); lastInput = performance.now(); });
+    const end = () => { dragging = false; wrap.classList.remove('drag'); lastInput = performance.now(); };
+    window.addEventListener('pointerup', end); window.addEventListener('pointercancel', end);
+    $('#t-spin').addEventListener('click', e => { spin = !spin; e.currentTarget.setAttribute('aria-pressed', String(spin)); });
+    $('#t-top').addEventListener('click', () => { selected = null; now(); spin = false; $('#t-spin').setAttribute('aria-pressed', 'false'); tween({ az: az, pol: .16, rad: fitRad() * .92, x: 0, z: 2 }); });
+    $('#t-reset').addEventListener('click', reset);
+    $('#t-in').addEventListener('click', () => { anim = null; rad = Math.max(35, rad * .8); });
+    $('#t-out').addEventListener('click', () => { anim = null; rad = Math.min(320, rad * 1.25); });
+  }
+
+  function init() {
+    wrap = $('#plan-stage'); canvas = $('#plan-canvas');
+    try {
+      if (typeof THREE === 'undefined') throw new Error('no three');
+      renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2)); renderer.setClearColor(0x000000, 0);
+      build(); ok = true;
+    } catch (e) {
+      ok = false; wrap.hidden = true; $('#plan-fallback').hidden = false;
+    }
+    if (ok) { buildUi(); bindInput(); if ('ResizeObserver' in window) new ResizeObserver(resize).observe(wrap); window.addEventListener('resize', resize); }
+    else { $('#now').innerHTML = '<p class="label">Zones</p><p class="muted">01 Main Stage, 02 VVIP Area, 03 VIP Area, 04 Beer Shop, 05 Wash Rooms, 06 Food Stalls, 07 Standing Area, 08 Heritage Moves Stage, 09 Entrance.</p>'; }
+  }
+  function start() {
+    if (!started) { started = true; init(); }
+    if (!ok || running) return;
+    running = true; resize(); rad = fitRad(); base.rad = rad; raf = requestAnimationFrame(frame);
+  }
+  function stop() { running = false; cancelAnimationFrame(raf); }
+  document.addEventListener('visibilitychange', () => { if (document.hidden) stop(); else if (current === 'plan') start(); });
+  return { start, stop };
+})();
+
+/* ---------- boot ---------- */
+go(location.hash.slice(1) || 'home', false);
+</script>
+
+</body>
+</html>
