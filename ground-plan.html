@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ground Plan | Thambapanni Colombo Night</title>
+<meta name="description" content="Interactive 3D ground plan of the Phase 1 venue: main stage, VVIP and VIP seating, food stalls, Heritage Moves stage and entrance.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Italiana&family=Jost:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="plan">
+<div id="site-header"></div>
+
+<main class="page">
+  <header class="page-head wrap">
+    <p class="eyebrow">Venue layout, Phase 1</p>
+    <h1>Ground Plan</h1>
+    <p class="lede">Drag to turn the venue. Tap a number, or pick a zone from the list, to fly in close.</p>
+    <div class="orn"><i></i></div>
+  </header>
+  <div class="wrap">
+    <div class="plan-stage" id="plan-stage">
+      <canvas id="plan-canvas" aria-label="Interactive 3D ground plan of the venue"></canvas>
+      <div class="pins" id="pins"></div>
+      <p class="plan-hint">Drag to rotate</p>
+      <div class="plan-tools">
+        <button type="button" id="t-spin" aria-pressed="true">Auto spin</button>
+        <button type="button" id="t-top">Top view</button>
+        <button type="button" id="t-reset">Reset</button>
+        <button type="button" id="t-in" aria-label="Zoom in">+</button>
+        <button type="button" id="t-out" aria-label="Zoom out">&minus;</button>
+      </div>
+    </div>
+    <div class="plan-fallback" id="plan-fallback" hidden>
+      <img src="img/plan.jpg" alt="Illustrated ground plan of the venue" width="2048" height="1462">
+      <p class="muted">The 3D view needs WebGL. Here is the illustrated plan instead.</p>
+    </div>
+    <div class="plan-info">
+      <div class="now" id="now" aria-live="polite"></div>
+      <ul class="legend" id="legend"></ul>
+    </div>
+    <p class="muted" style="margin-top:26px;max-width:60ch">This is the Phase 1 layout from 2025. The Phase 2 plan will be published here once the 2027 venue is confirmed.</p>
+  </div>
+</main>
+
+<div id="site-footer"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="site.js"></script>
+<script src="plan.js"></script>
+</body>
+</html>
