@@ -8,9 +8,9 @@ const CONFIG = {
   whatsapp: '94779550171',             // WhatsApp number, country code first, no + or spaces
   ticketUrl: 'https://www.ticketsministry.com',
   social: {                            // replace with your real page links
-    facebook:  'https://www.facebook.com/',
-    instagram: 'https://www.instagram.com/',
-    tiktok:    'https://www.tiktok.com/'
+    facebook:  'https://www.facebook.com/share/1CHYkFPELP/?mibextid=wwXIfr',
+    instagram: 'https://www.instagram.com/thambapan_ni?mdxt=MXJmOHBrZGVtMDB5aA==',
+    tiktok:    'https://www.tiktok.com/@thambapanni4?_r=1&_t=ZS-9AikKxspA1v'
   },
   contacts: [
     { name: 'Nadeesha', phone: '070 590 4903' },
